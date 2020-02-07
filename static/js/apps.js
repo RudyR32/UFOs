@@ -19,3 +19,10 @@ data.forEach((dataRow) => {
         }
     );
 });
+
+//Create function handle click
+function handleClick() {
+    let date = d3.select("#datetime").property("value");
+    //Add variable data table
+    let filteredData = tableData;
+    
