@@ -34,6 +34,10 @@ function handleClick() {
     buildTable(filteredData);
 };
 
+// function newFilters(){
+//     let 
+// }
+
 //Listen for the Click
 d3.select("#filter-btn").on("click", handleClick);
 //Call build datatable
