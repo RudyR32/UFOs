@@ -25,4 +25,16 @@ function handleClick() {
     let date = d3.select("#datetime").property("value");
     //Add variable data table
     let filteredData = tableData;
-    
+    if (date) {
+        filteredData = filteredData.filter(row => row.datetime === date);
+    };
+    // Rebuild the table using the filtered data
+    // @NOTE: If no date was entered, then filteredData will
+    // just be the original tableData.
+    buildTable(filteredData);
+};
+
+//Listen for the Click
+d3.select("#filter-btn").on("click", handleClick);
+//Call build datatable
+buildTable(tableData);
